@@ -1,0 +1,283 @@
+/*引入通用样式和初始化代码的less文件*/
+/* 这里一般写初始化less文件代码和一些通用的样式代码 */
+/*初始化代码*/
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.border-right {
+  border-right: 1px solid #ccc;
+}
+.border-left {
+  border-left: 1px solid #ccc;
+}
+.border-top {
+  border-top: 1px solid #ccc;
+}
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+/*头部区域样式*/
+body {
+  background-color: #f5f5f5;
+  max-width: 750px;
+  margin: 0 auto;
+}
+#header {
+  position: fixed;
+  max-width: 750px;
+  width: 100%;
+  background-color: #e93b3d;
+  display: flex;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0);
+  z-index: 999;
+}
+#header .logo {
+  display: block;
+  width: 58px;
+  height: 23px;
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  background-position: 0 -110px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#header .form {
+  flex: 1;
+  margin-left: 10px;
+  position: relative;
+}
+#header .form .icon-search {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  background-position: -60px -110px;
+  left: 8px;
+  top: 7px;
+}
+#header .form > input {
+  height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 30px;
+}
+#header .login {
+  width: 60px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+/*轮播图区域样式*/
+#solid .swiper-slide > a > img {
+  width: 100%;
+}
+#solid .swiper-pagination-bullet {
+  background-color: transparent;
+  opacity: 1;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+#solid .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+/*导航栏区域样式*/
+#nav {
+  padding: 20px;
+  background-color: #fff;
+}
+#nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav > ul > li {
+  width: 25%;
+}
+#nav > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#nav > ul > li > a > img {
+  width: 40px;
+  height: 40px;
+}
+#nav > ul > li > a > p {
+  font-size: 14px;
+  line-height: 30px;
+}
+/*主题区域样式*/
+#main {
+  /*秒杀环节*/
+  padding: 10px;
+  padding-bottom: 60px;
+}
+#main .seckill {
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: 0px 0px 1px #ccc;
+}
+#main .seckill .title {
+  padding: 5px;
+}
+#main .seckill .title .naozhong {
+  width: 20px;
+  height: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+#main .seckill .title .name {
+  font-size: 14px;
+  color: #e93b3d;
+  margin-left: 5px;
+}
+#main .seckill .title .time {
+  font-size: 14px;
+}
+#main .seckill .title .time > span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 15px;
+}
+#main .seckill .title .time > span:nth-child(3n) {
+  background-color: #fff;
+  color: #000;
+}
+#main .seckill .title .more {
+  font-size: 14px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+#main .seckill .content > ul {
+  display: flex;
+}
+#main .seckill .content > ul > li {
+  flex: 1;
+}
+#main .seckill .content > ul > li:nth-child(2) {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+#main .seckill .content > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#main .seckill .content > ul > li > a > img {
+  width: 110px;
+}
+#main .seckill .content > ul > li > a > p > span {
+  color: #e93b3d;
+}
+#main .seckill .content > ul > li > a > p > del {
+  color: #ccc;
+}
+#main .jd-market {
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px #ccc;
+}
+#main .jd-market .title {
+  border-bottom: 1px solid #ccc;
+}
+#main .jd-market .title > h4 {
+  font-weight: normal;
+  line-height: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+#main .jd-market .title > h4::before {
+  content: "";
+  width: 4px;
+  height: 15px;
+  background-color: #e93b3d;
+  position: absolute;
+  left: 15px;
+  top: 7.5px;
+}
+#main .jd-market .content {
+  display: flex;
+}
+#main .jd-market .content .left {
+  flex: 1;
+}
+#main .jd-market .content .left > a {
+  display: block;
+}
+#main .jd-market .content .left > a > img {
+  width: 100%;
+}
+#main .jd-market .content .right {
+  flex: 1;
+}
+#main .jd-market .content .right > a {
+  display: block;
+}
+#main .jd-market .content .right > a > img {
+  width: 100%;
+}
+/*底部区域样式*/
+#footer {
+  margin-top: 10px;
+  max-width: 750px;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+#footer > ul {
+  display: flex;
+}
+#footer > ul > li {
+  flex: 1;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a > img {
+  width: 65px;
+  height: 50px;
+}

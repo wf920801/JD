@@ -1,0 +1,203 @@
+/* 这里一般写初始化less文件代码和一些通用的样式代码 */
+/*初始化代码*/
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.border-right {
+  border-right: 1px solid #ccc;
+}
+.border-left {
+  border-left: 1px solid #ccc;
+}
+.border-top {
+  border-top: 1px solid #ccc;
+}
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  padding: 40px 0 50px;
+}
+/* 头部区域样式*/
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  height: 40px;
+}
+#header > a {
+  display: block;
+  padding: 10px;
+  width: 40px;
+}
+#header > a .icon-back {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/sprites.png);
+  background-position: -20px 0;
+  background-size: 200px 200px;
+}
+#header > a .icon-more {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/sprites.png);
+  background-position: -60px 0;
+  background-size: 200px 200px;
+}
+#header .form {
+  flex: 1;
+  margin-top: 5px;
+  position: relative;
+}
+#header .form > input {
+  height: 30px;
+  width: 100%;
+  padding-left: 30px;
+  border-radius: 15px;
+}
+#header .form .icon-search {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  background-image: url(../images/sprites.png);
+  background-size: 200px 200px;
+  background-position: -60px -110px;
+  left: 8px;
+  top: 7px;
+}
+/*主体区域样式*/
+#main {
+  display: flex;
+  height: 100%;
+}
+#main .left {
+  width: 85px;
+  height: 100%;
+  overflow: hidden;
+}
+#main .left .swiper-container {
+  height: 100%;
+}
+#main .left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .left .swiper-container .swiper-slide > ul {
+  background-color: #f5f5f5;
+}
+#main .left .swiper-container .swiper-slide > ul > li > a {
+  display: block;
+  width: 85px;
+  height: 46px;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+}
+#main .left .swiper-container .swiper-slide > ul > li.active {
+  background-color: #fff;
+}
+#main .left .swiper-container .swiper-slide > ul > li.active > a {
+  color: #e93b3d;
+}
+#main .right {
+  height: 100%;
+  flex: 1;
+  padding: 10px;
+  overflow: hidden;
+}
+#main .right .swiper-container {
+  height: 100%;
+}
+#main .right .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > h4 {
+  font-size: 14px;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > ul > li {
+  flex: 33.3%;
+  margin: 10px 0;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > ul > li > a > img {
+  width: 70px;
+  height: 70px;
+}
+#main .right .swiper-container .swiper-slide .branchList .jd-brand > ul > li > a > span {
+  display: inline-block;
+  font-size: 12px;
+}
+/*底部区域样式*/
+#footer {
+  margin-top: 10px;
+  max-width: 750px;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+#footer > ul {
+  display: flex;
+}
+#footer > ul > li {
+  flex: 1;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a > img {
+  width: 65px;
+  height: 50px;
+}
